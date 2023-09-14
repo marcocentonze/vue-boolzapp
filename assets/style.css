@@ -28,7 +28,7 @@ font-family: 'VT323', monospace;
     background-color: yellow;
 }
 
-.height-60{
+.min-height-60{
     min-height: 60px;
 }
 .vh-100{
@@ -37,5 +37,41 @@ font-family: 'VT323', monospace;
 .vh-100x{
     height:calc(100vh - 60px);
 }
+.height-60{
+    height: 60px;
+    width:calc(100% - 380px);
+}
 
 /* /utilities */
+
+
+/* Media queries per i vari breakpoints */
+@media (min-width: 576px) {
+    .col-4.blue.height-60 {
+        width: calc(100% - 180px);
+    }
+}
+
+@media (min-width: 768px) {
+    .col-4.blue.height-60 {
+        width: calc(100% - 240px);
+    }
+}
+
+@media (min-width: 992px) {
+    .col-4.blue.height-60 {
+        width: calc(100% - 320px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-4.blue.height-60 {
+        width: calc(100% - 380px);
+    }
+}
+
+@media (min-width: 1400px) {
+    .col-4.blue.height-60 {
+        width: calc(100% - 440px);
+    }
+}
