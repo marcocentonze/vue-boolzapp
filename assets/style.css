@@ -12,11 +12,11 @@ body{
 font-family: 'Ubuntu', sans-serif;
 font-family: 'VT323', monospace;
 }
-
-.header-bg{
+.custom_container{
+    height: 20vh;
     background-color: var(--bz-app-header);
-    min-height: 80px;
 }
+
 /* utilities */
 .red{
     background-color: red;
@@ -28,50 +28,23 @@ font-family: 'VT323', monospace;
     background-color: yellow;
 }
 
-.min-height-60{
-    min-height: 60px;
-}
-.vh-100{
-    height:100vh;
-}
-.vh-100x{
-    height:calc(100vh - 60px);
-}
-.height-60{
-    height: 60px;
-    width:calc(100% - 380px);
-}
+
 
 /* /utilities */
-
-
-/* Media queries per i vari breakpoints */
-@media (min-width: 576px) {
-    .col-4.blue.height-60 {
-        width: calc(100% - 180px);
-    }
+.circle{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
-@media (min-width: 768px) {
-    .col-4.blue.height-60 {
-        width: calc(100% - 240px);
-    }
+.img-bg{
+    background-image: url(./img/mine.jpg);
+    height: calc(82vh - 8px);
+    overflow: auto;
 }
 
-@media (min-width: 992px) {
-    .col-4.blue.height-60 {
-        width: calc(100% - 320px);
-    }
-}
-
-@media (min-width: 1200px) {
-    .col-4.blue.height-60 {
-        width: calc(100% - 380px);
-    }
-}
-
-@media (min-width: 1400px) {
-    .col-4.blue.height-60 {
-        width: calc(100% - 440px);
-    }
+.img-bg-chat{
+    background-color: #F3EEEA;
+    
 }
