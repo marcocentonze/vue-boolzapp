@@ -28,6 +28,20 @@ font-family: 'VT323', monospace;
     background-color: yellow;
 }
 
+.font-small{
+    font-size:12px;
+}
+.font-smaller{
+    font-size:10px;
+}
+
+.border-chat-top{
+    border-top: 1px solid rgb(247,243,243);
+}
+
+.color-icons{
+    color:#b1b1b1;
+}
 
 
 /* /utilities */
@@ -40,7 +54,7 @@ font-family: 'VT323', monospace;
 
 .img-bg{
     background-image: url(./img/mine.jpg);
-    height: calc(82vh - 8px);
+    height: calc(80vh - 8px);
     overflow: auto;
 }
 
@@ -48,3 +62,4 @@ font-family: 'VT323', monospace;
     background-color: #F3EEEA;
     
 }
+

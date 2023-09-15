@@ -2,226 +2,283 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue boolzapp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body style="background-color: var(--bz-app-light);">
 
-  <div id="app">
+    <div id="app">
 
-    <div class="custom_container">            
-      <div class="container d-flex">
-          <div class="col-4 pt-4">
+        <div class="custom_container">
+            <div class="container d-flex">
+                <div class="col-4 pt-4 ">
 
-                  <div class="d-flex justify-content-between px-3 py-2" style="background-color: var(--bz-app-light);">
-                      <div class="d-flex align-items-center gap-1">
-                          
-                          <div>
-                              <img class="circle img-fluid" src="./assets/img/avatar_1.jpg">
-                          </div>
-                          <span>Marco</span>
+                    <div class="d-flex justify-content-between px-3 py-2"
+                        style="background-color: var(--bz-app-light);">
+                        <div class="d-flex align-items-center gap-1">
 
-                      </div>
+                            <div>
+                                <img class="circle img-fluid" src="./assets/img/avatar_1.jpg">
+                            </div>
+                            <span>Marco</span>
 
-                      <div class="d-flex align-items-center gap-3" style="color: var(--bz-app-principal);">
-                          <i class="fa-solid fa-circle-notch fa-lg" ></i>
-                          <i class="fa-solid fa-message fa-lg" ></i>
-                          <i class="fa-solid fa-bars fa-lg" ></i>
-                      </div>
+                        </div>
 
-                  </div>
-              
-              <div class="d-flex px-3 py-2 gap-2 align-items-center" style="background-color: var(--bz-app-focus);">
+                        <div class="d-flex align-items-center gap-3" style="color: var(--bz-app-principal);">
+                            <i class="fa-solid fa-circle-notch fa-lg color-icons"></i>
+                            <i class="fa-solid fa-message fa-lg color-icons"></i>
+                            <i class="fa-solid fa-bars fa-lg color-icons"></i>
+                        </div>
 
-                  <div class="circle d-flex justify-content-center align-items-center bg-white">
-                      <i class="fa-solid fa-bell-slash fa-lg" style="background-color: var(--bz-app-focus);"></i>
-                  </div>
-                  <div class="d-flex flex-column">
-                      <span>Ricevi notifiche dei nuovi messaggi</span>
-                      <span class="text-decoration-underline">Attiva notifiche desktop</span>
-                  </div>
+                    </div>
 
-              </div>
-              <div class="bg-white p-2">
-                  <div class="input-group flex-nowrap">
-                      <span class="input-group-text bg-white border-0 shadow-sm">
-                          <i class="fa-solid fa-magnifying-glass fa-xs" style="background-color: var(--bz-app-principal);"></i>
-                      </span>
-                      <input type="text" class="form-control border-0 shadow-sm" placeholder="Cerca o inizia una nuova chat..">
-                  </div>
-              </div>
-              <div class="bg-white container d-flex shadow-sm">
-                  
-                  <div style="height: 75vh; overflow: auto;">
-                      <div class="d-flex justify-content-between gap-1 py-2" style="width: 380px; max-width: 400px;">
-                      
-                          <div class="d-flex gap-1">
-                              <img class="circle" src="assets/img/avatar_2.jpg" style="height: 70px; width: 70px;">
-                              <div class="d-flex flex-column">
-                                  <span>Michele</span>
-                                  <span>
-                                      Ultimo messaggio inviato
-                                  </span>
-                              </div>
-                          </div>                       
-                          <div class="d-flex justify-content-end">
-                              <span style="background-color: var(--bz-app-principal);">12:00</span>
-                          </div>
-                          
+                    <div class="d-flex px-3 py-2 gap-2 align-items-center"
+                        style="background-color: var(--bz-app-focus);">
 
-                      </div>
-                     
-                      <div class="d-flex gap-1">
-                        <img class="circle" src="assets/img/avatar_2.jpg" style="height: 70px; width: 70px;">
+                        <div class="circle d-flex justify-content-center align-items-center bg-white">
+                            <i class="fa-solid fa-bell-slash fa-lg" style="background-color: var(--bz-app-focus);"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <span>Ricevi notifiche dei nuovi messaggi</span>
+                            <span class="text-decoration-underline font-small">Attiva notifiche desktop</span>
+                        </div>
+
+                    </div>
+                    <div class="bg-white p-2">
+                        <div class="input-group flex-nowrap">
+                            <span class="input-group-text bg-white border-0 shadow-sm">
+                                <i class="fa-solid fa-magnifying-glass fa-xs"
+                                    style="background-color: var(--bz-app-principal);"></i>
+                            </span>
+                            <input type="text" class="form-control border-0 shadow-sm font-small"
+                                placeholder="Cerca o inizia una nuova chat..">
+                        </div>
+                    </div>
+                    <div class="bg-white container d-flex shadow-sm">
+
+                        <div style="height: 75vh; overflow-x: auto;">
+                            <div class="d-flex justify-content-between gap-1 py-2"
+                                style="width: 380px; max-width: 400px;">
+
+                                <div class="d-flex gap-1">
+                                    <img class="circle" src="assets/img/avatar_2.jpg"
+                                        style="height: 70px; width: 70px;">
+                                    <div class="d-flex flex-column">
+                                        <span>Michele</span>
+                                        <span class="font-small" style="color: #B1B1B1;">
+                                            Ultimo messaggio inviato
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
+                            style="width: 380px; max-width: 400px;">
+
+                            <div class="d-flex gap-1">
+                                <img class="circle" src="assets/img/avatar_2.jpg"
+                                    style="height: 70px; width: 70px;">
+                                <div class="d-flex flex-column">
+                                    <span>Michele</span>
+                                    <span class="font-small" style="color: #B1B1B1;">
+                                        Ultimo messaggio inviato
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
+                            </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
+                                style="width: 380px; max-width: 400px;">
+
+                                <div class="d-flex gap-1">
+                                    <img class="circle" src="assets/img/avatar_2.jpg"
+                                        style="height: 70px; width: 70px;">
+                                    <div class="d-flex flex-column">
+                                        <span>Michele</span>
+                                        <span class="font-small" style="color: #B1B1B1;">
+                                            Ultimo messaggio inviato
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
+                                </div>
+
+
+                            </div>
+
+
+                            <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
+                            style="width: 380px; max-width: 400px;">
+
+                            <div class="d-flex gap-1">
+                                <img class="circle" src="assets/img/avatar_2.jpg"
+                                    style="height: 70px; width: 70px;">
+                                <div class="d-flex flex-column">
+                                    <span>Michele</span>
+                                    <span class="font-small" style="color: #B1B1B1;">
+                                        Ultimo messaggio inviato
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
+                        style="width: 380px; max-width: 400px;">
+
+                        <div class="d-flex gap-1">
+                            <img class="circle" src="assets/img/avatar_2.jpg"
+                                style="height: 70px; width: 70px;">
+                            <div class="d-flex flex-column">
+                                <span>Michele</span>
+                                <span class="font-small" style="color: #B1B1B1;">
+                                    Ultimo messaggio inviato
+                                </span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
+                        </div>
+
+
+                    </div>
+
+                    <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
+                    style="width: 380px; max-width: 400px;">
+
+                    <div class="d-flex gap-1">
+                        <img class="circle" src="assets/img/avatar_2.jpg"
+                            style="height: 70px; width: 70px;">
                         <div class="d-flex flex-column">
                             <span>Michele</span>
-                            <span>
+                            <span class="font-small" style="color: #B1B1B1;">
                                 Ultimo messaggio inviato
                             </span>
                         </div>
-                    </div>                       
+                    </div>
                     <div class="d-flex justify-content-end">
-                        <span style="background-color: var(--bz-app-principal);">12:00</span>
+                        <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
                     </div>
 
-                    <div class="d-flex gap-1">
-                      <img class="circle" src="assets/img/avatar_2.jpg" style="height: 70px; width: 70px;">
-                      <div class="d-flex flex-column">
-                          <span>Michele</span>
-                          <span>
-                              Ultimo messaggio inviato
-                          </span>
-                      </div>
-                  </div>                       
-                  <div class="d-flex justify-content-end">
-                      <span style="background-color: var(--bz-app-principal);">12:00</span>
-                  </div>
 
-                  <div class="d-flex gap-1">
-                    <img class="circle" src="assets/img/avatar_2.jpg" style="height: 70px; width: 70px;">
-                    <div class="d-flex flex-column">
-                        <span>Michele</span>
-                        <span>
-                            Ultimo messaggio inviato
-                        </span>
-                    </div>
-                </div>                       
-                <div class="d-flex justify-content-end">
-                    <span style="background-color: var(--bz-app-principal);">12:00</span>
                 </div>
 
-                <div class="d-flex gap-1">
-                  <img class="circle" src="assets/img/avatar_2.jpg" style="height: 70px; width: 70px;">
-                  <div class="d-flex flex-column">
-                      <span>Michele</span>
-                      <span>
-                          Ultimo messaggio inviato
-                      </span>
-                  </div>
-              </div>                       
-              <div class="d-flex justify-content-end">
-                  <span style="background-color: var(--bz-app-principal);">12:00</span>
-              </div>
-
-
-                  </div>
-                  
-                  
-
-              </div>
-
-          </div>
-
-          <div class="col-8 pt-4">
-              
-              <div class="d-flex justify-content-between px-4 py-2 shadow" style="background-color: var(--bz-app-light);">
-                  <div class="d-flex align-items-center gap-1">
-                      
-                      <div>
-                          <img>
-                      </div>
-                      <div class="d-flex flex-column">
-                          <span>Michele</span>
-                          <span style="color: var(--bz-app-principal);">Ultimo accesso oggi alle 12:00</span>
-                      </div>
-
-                  </div>
-                  <div class="d-flex align-items-center gap-3" style="color: var(--bz-app-principal);">
-                      <i class="fa-solid fa-magnifying-glass fa-lg" ></i>
-                      <i class="fa-solid fa-paperclip fa-lg"></i>
-                      <i class="fa-solid fa-bars fa-lg"></i>
-
-                  </div>
-
-              </div>
-              <div class="container shadow-sm img-bg">
-                  <div>
-
-                      <div class="d-flex justify-content-end mx-5 mt-5">
-                          
-                          <div class="p-2 rounded-3" style="background-color: var(--bz-app-success);">
-                              Hai portato a spasso il cane?
-                              <div class=" text-end" style="color: var(--bz-app-principal);">15.30</div>
-                          </div>
-                          
-                      </div>
-                      <div class="d-flex justify-content-end mx-5 mt-4">
-                          
-                          <div class="p-2 rounded-3"style="background-color: var(--bz-app-success);">
-                              Ricordati di stendere i panni
-                              <div class="text-end" style="color: var(--bz-app-principal);">15.40</div>
-                          </div>
-                          
-                      </div>
-                      <div class="d-flex justify-content-start mx-5 mt-4">
-                          
-                          <div class="bg-white p-2 rounded-3">
-                              Tutto fatto!
-                              <div class="text-end" style="color: var(--bz-app-principal);">15.45</div>
-                          </div>
-                          
-                      </div>
-
-                  </div>
-              </div>
-              <div class="input-group flex-nowrap p-2 shadow-sm img-bg-chat">
-                  <span class="input-group-text border-0 img-bg-chat">
-                      <i class="fa-regular fa-face-smile fa-lg" style="background-color: var(--bz-app-principal);"></i>
-                  </span>
-                  <input type="text" class="form-control border-0 rounded-2 p-2 shadow-sm" placeholder="Scrivi un messaggio">
-                  <span class="input-group-text border-0 img-bg-chat">
-                      <i class="fa-solid fa-paper-plane fa-lg"></i>
-                  </span>
-              </div>
-              
-          </div>
-          
-      </div>
-
-  </div>
-
-  <div class="container" style="height: calc(100vh - 20vh);">
-
-  </div>
+                        </div>
 
 
 
-  </div>
+                    </div>
 
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-    crossorigin="anonymous"></script>
-  <script src="./assets/script.js"></script>
+                </div>
+
+                <div class="col-8 pt-4">
+
+                    <div class="d-flex justify-content-between px-4 py-2 shadow"
+                        style="background-color: var(--bz-app-light);">
+                        <div class="d-flex align-items-center gap-1">
+
+                            <div>
+                                <img>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <span>Michele</span>
+                                <span class="font-small " style="color: #aba296;">Ultimo accesso oggi alle 12:00</span>
+                            </div>
+
+                        </div>
+                        <div class="d-flex align-items-center gap-3" style="color: var(--bz-app-principal);">
+                            <i class="fa-solid fa-magnifying-glass fa-lg color-icons"></i>
+                            <i class="fa-solid fa-paperclip fa-lg color-icons"></i>
+                            <i class="fa-solid fa-bars fa-lg color-icons"></i>
+
+                        </div>
+
+                    </div>
+                    <div class="container shadow-sm img-bg">
+                        <div>
+
+                            <div class="d-flex justify-content-end mx-5 mt-5">
+
+                                <div class="p-2 rounded-3" style="background-color: var(--bz-app-success);">
+                                    Hai portato a spasso il cane?
+                                    <div class=" text-end" style="color: var(--bz-app-principal);">15.30</div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-end mx-5 mt-4">
+
+                                <div class="p-2 rounded-3" style="background-color: var(--bz-app-success);">
+                                    Ricordati di stendere i panni
+                                    <div class="text-end" style="color: var(--bz-app-principal);">15.40</div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-start mx-5 mt-4">
+
+                                <div class="bg-white p-2 rounded-3">
+                                    Tutto fatto!
+                                    <div class="text-end" style="color: var(--bz-app-principal);">15.45</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="input-group flex-nowrap p-2 shadow-sm img-bg-chat">
+                        <span class="input-group-text border-0 img-bg-chat">
+                            <i class="fa-regular fa-face-smile fa-lg"
+                                style="background-color: var(--bz-app-principal);"></i>
+                        </span>
+                        <input type="text" class="form-control border-0 rounded-2 p-2 shadow-sm"
+                            placeholder="Scrivi un messaggio">
+                        <span class="input-group-text border-0 img-bg-chat">
+                            <i class="fa-solid fa-paper-plane fa-lg"></i>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container" style="height: calc(100vh - 20vh);">
+
+        </div>
+
+
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
