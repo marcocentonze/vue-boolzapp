@@ -64,15 +64,14 @@
                     </div>
                     <div class="bg-white container d-flex shadow-sm">
 
-                        <div style="height: 75vh; overflow-x: auto;">
+                        <div style="height: 70vh; overflow: auto;">
                             <div class="d-flex justify-content-between gap-1 py-2"
-                                style="width: 380px; max-width: 400px;">
+                                style="width: 380px; max-width: 400px;" v-for="(contact,index) in contacts">
 
                                 <div class="d-flex gap-1">
-                                    <img class="circle" src="assets/img/avatar_2.jpg"
-                                        style="height: 70px; width: 70px;">
+                                    <img class="circle" :src="contact.avatar" style="height: 70px; width: 70px;">
                                     <div class="d-flex flex-column">
-                                        <span>Michele</span>
+                                        <span>{{contact.name}}</span>
                                         <span class="font-small" style="color: #B1B1B1;">
                                             Ultimo messaggio inviato
                                         </span>
@@ -84,110 +83,7 @@
 
 
                             </div>
-
-                            <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
-                            style="width: 380px; max-width: 400px;">
-
-                            <div class="d-flex gap-1">
-                                <img class="circle" src="assets/img/avatar_2.jpg"
-                                    style="height: 70px; width: 70px;">
-                                <div class="d-flex flex-column">
-                                    <span>Michele</span>
-                                    <span class="font-small" style="color: #B1B1B1;">
-                                        Ultimo messaggio inviato
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
-                            </div>
-                                </div>
-
-                                <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
-                                style="width: 380px; max-width: 400px;">
-
-                                <div class="d-flex gap-1">
-                                    <img class="circle" src="assets/img/avatar_2.jpg"
-                                        style="height: 70px; width: 70px;">
-                                    <div class="d-flex flex-column">
-                                        <span>Michele</span>
-                                        <span class="font-small" style="color: #B1B1B1;">
-                                            Ultimo messaggio inviato
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
-                                </div>
-
-
-                            </div>
-
-
-                            <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
-                            style="width: 380px; max-width: 400px;">
-
-                            <div class="d-flex gap-1">
-                                <img class="circle" src="assets/img/avatar_2.jpg"
-                                    style="height: 70px; width: 70px;">
-                                <div class="d-flex flex-column">
-                                    <span>Michele</span>
-                                    <span class="font-small" style="color: #B1B1B1;">
-                                        Ultimo messaggio inviato
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
-                            </div>
-
-
                         </div>
-
-                        <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
-                        style="width: 380px; max-width: 400px;">
-
-                        <div class="d-flex gap-1">
-                            <img class="circle" src="assets/img/avatar_2.jpg"
-                                style="height: 70px; width: 70px;">
-                            <div class="d-flex flex-column">
-                                <span>Michele</span>
-                                <span class="font-small" style="color: #B1B1B1;">
-                                    Ultimo messaggio inviato
-                                </span>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
-                        </div>
-
-
-                    </div>
-
-                    <div class="d-flex justify-content-between border-chat-top gap-1 py-2"
-                    style="width: 380px; max-width: 400px;">
-
-                    <div class="d-flex gap-1">
-                        <img class="circle" src="assets/img/avatar_2.jpg"
-                            style="height: 70px; width: 70px;">
-                        <div class="d-flex flex-column">
-                            <span>Michele</span>
-                            <span class="font-small" style="color: #B1B1B1;">
-                                Ultimo messaggio inviato
-                            </span>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
-                    </div>
-
-
-                </div>
-
-                        </div>
-
-
-
                     </div>
 
                 </div>

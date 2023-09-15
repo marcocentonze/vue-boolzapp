@@ -54,7 +54,7 @@ font-family: 'VT323', monospace;
 
 .img-bg{
     background-image: url(./img/mine.jpg);
-    height: calc(80vh - 8px);
+    height: 80vh;
     overflow: auto;
 }
 
