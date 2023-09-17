@@ -180,6 +180,7 @@ createApp({
       }
       // Creo un nuovo oggetto messaggio
       const message = {
+        //ottengo la data in tempo reale
         date: new Date().toLocaleString(),
         message: this.newMessage,
         status: "sent", // sent così diventa verde
@@ -190,6 +191,17 @@ createApp({
 
       // Resetto l'input del mess
       this.newMessage = "";
-    }
+       // viene inviata la risposta automatica dopo 1 secondo dal mess inviato
+    setTimeout(this.sendResponse, 1000);
+    },
+    sendResponse() {
+      const responseMessageAuto = {
+        date: new Date().toLocaleString(),
+        message: "ok",
+        status: "received",
+      };
+  
+      this.contacts[this.activeContact].messages.push(responseMessageAuto);
+    },
   }
 }).mount("#app");
