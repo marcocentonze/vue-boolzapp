@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       activeContact: 1,
+      newMessage:'',
       contacts: [
         {
           name: "Michele",
@@ -173,5 +174,22 @@ createApp({
     selectContact(index) {
         this.activeContact = index
     },
+    addMessage() {
+      if (this.newMessage === "") {
+        return
+      }
+      // Creo un nuovo oggetto messaggio
+      const message = {
+        date: new Date().toLocaleString(),
+        message: this.newMessage,
+        status: "sent", // sent così diventa verde
+      };
+
+      // Aggiungo il messaggio al thread del contatto attivo(usando activeContact)
+      this.contacts[this.activeContact].messages.push(message);
+
+      // Resetto l'input del mess
+      this.newMessage = "";
+    }
   }
 }).mount("#app");

@@ -133,10 +133,11 @@
                             <i class="fa-regular fa-face-smile fa-lg"
                                 style="background-color: var(--bz-app-principal);"></i>
                         </span>
-                        <input type="text" class="form-control border-0 rounded-2 p-2 shadow-sm"
+                        <!--keyup when we are listening for keyboard events -->
+                        <input  v-model="newMessage" @keyup.enter="addMessage" type="text" class="form-control border-0 rounded-2 p-2 shadow-sm"
                             placeholder="Scrivi un messaggio">
                         <span class="input-group-text border-0 img-bg-chat">
-                            <i class="fa-solid fa-paper-plane fa-lg"></i>
+                            <i @click="addMessage"  class="fa-solid fa-paper-plane fa-lg"></i>
                         </span>
                     </div>
 
