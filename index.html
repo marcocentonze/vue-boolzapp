@@ -98,8 +98,8 @@
                         style="background-color: var(--bz-app-light);">
                         <div class="d-flex align-items-center gap-1">
 
-                            <div>
-                                <img>
+                            <div v-if="contacts[activeContact]">
+                                <img class="circle":src="contacts[activeContact].avatar">
                             </div>
                             <div class="d-flex flex-column">
                                 <span>{{contacts[activeContact].name}}</span>
