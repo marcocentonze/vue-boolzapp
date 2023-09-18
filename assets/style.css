@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'VT323', monospace;
+}
+
+.custom_container{
+    height: 20vh;
+    background-color: var(--bz-app-header);
+}
+
+/* utilities */
 :root {
     --bz-app-principal: #DBDBD2;
     --bz-app-header: #009688;
@@ -11,27 +24,6 @@
     --bz-app-light: #E9EBEB;
     --bz-app-white: #FFFFFF;
     --bz-app-focus: #8EDAFC;
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-font-family: 'Ubuntu', sans-serif;
-font-family: 'VT323', monospace;
-}
-.custom_container{
-    height: 20vh;
-    background-color: var(--bz-app-header);
-}
-
-/* utilities */
-.red{
-    background-color: red;
-}
-.blue{
-    background-color: blue;
-}
-.yellow{
-    background-color: yellow;
 }
 
 .font-small{
@@ -47,6 +39,10 @@ font-family: 'VT323', monospace;
 
 .color-icons{
     color:#b1b1b1;
+}
+
+.pointer{
+    cursor: pointer;
 }
 
 
@@ -71,8 +67,11 @@ font-family: 'VT323', monospace;
 
 .height-leftside{
     height:73vh;
-    overflow: auto;
+    min-width: 360px;
+    overflow-x: hidden;
 }
+
+
 
 @media (max-width: 768px) {
     .height-leftside {

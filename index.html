@@ -33,9 +33,9 @@
                         </div>
 
                         <div class="d-flex align-items-center gap-3" style="color: var(--bz-app-principal);">
-                            <i class="fa-solid fa-circle-notch fa-lg color-icons"></i>
-                            <i class="fa-solid fa-message fa-lg color-icons"></i>
-                            <i class="fa-solid fa-bars fa-lg color-icons"></i>
+                            <i class="fa-solid fa-circle-notch fa-lg color-icons pointer"></i>
+                            <i class="fa-solid fa-message fa-lg color-icons pointer"></i>
+                            <i class="fa-solid fa-bars fa-lg color-icons pointer"></i>
                         </div>
 
                     </div>
@@ -55,7 +55,7 @@
                     <div class="bg-white p-2">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text bg-white border-0 shadow-sm">
-                                <i class="fa-solid fa-magnifying-glass fa-xs"
+                                <i class="fa-solid fa-magnifying-glass fa-xs pointer"
                                     style="background-color: var(--bz-app-principal);"></i>
                             </span>
                             <input  v-model="searchText" type="text" @keyup="filterContacts" class="form-control border-0 shadow-sm font-small"
@@ -105,9 +105,9 @@
 
                         </div>
                         <div class="d-flex align-items-center gap-3" style="color: var(--bz-app-principal);">
-                            <i class="fa-solid fa-magnifying-glass fa-lg color-icons"></i>
-                            <i class="fa-solid fa-paperclip fa-lg color-icons"></i>
-                            <i class="fa-solid fa-bars fa-lg color-icons"></i>
+                            <i class="fa-solid fa-magnifying-glass fa-lg color-icons pointer"></i>
+                            <i class="fa-solid fa-paperclip fa-lg color-icons pointer"></i>
+                            <i class="fa-solid fa-bars fa-lg color-icons pointer"></i>
 
                         </div>
 
@@ -130,14 +130,14 @@
                     </div>
                     <div class="input-group flex-nowrap p-2 shadow-sm img-bg-chat">
                         <span class="input-group-text border-0 img-bg-chat">
-                            <i class="fa-regular fa-face-smile fa-lg"
+                            <i class="fa-regular fa-face-smile fa-lg pointer"
                                 style="background-color: var(--bz-app-principal);"></i>
                         </span>
                         <!--keyup when we are listening for keyboard -->
                         <input  v-model="newMessage" @keyup.enter="addMessage" type="text" class="form-control border-0 rounded-2 p-2 shadow-sm"
                             placeholder="Scrivi un messaggio">
                         <span class="input-group-text border-0 img-bg-chat">
-                            <i @click="addMessage"  class="fa-solid fa-paper-plane fa-lg"></i>
+                            <i @click="addMessage"  class="fa-solid fa-paper-plane fa-lg pointer"></i>
                         </span>
                     </div>
 
