@@ -44,7 +44,7 @@
                         style="background-color: var(--bz-app-focus);">
 
                         <div class="circle d-flex justify-content-center align-items-center bg-white">
-                            <i class="fa-solid fa-bell-slash fa-lg" style="background-color: var(--bz-app-focus);"></i>
+                            <i class="fa-solid fa-bell-slash fa-lg" style="background-color: var(--bz-app-focus); color: #8EDAFC;"></i>
                         </div>
                         <div class="d-flex flex-column">
                             <span>Ricevi notifiche dei nuovi messaggi</span>
@@ -66,7 +66,7 @@
 
                         <div class="height-leftside">
                             <div class="d-flex justify-content-between gap-1 py-2 border-chat-top"
-                                style="width: 380px; max-width: 400px;" v-for="(contact, index) in searchText ? filteredContacts : contacts" @click="selectContact(index)">
+                                style="width: 380px; max-width: 400px;" v-for="(contact, index) in searchText ? filteredContacts : contacts" @click="selectContact(index)" >
 
                                 <div class="d-flex gap-1">
                                     <img class="circle" :src="contact.avatar" style="height: 50px; width: 50px;">
