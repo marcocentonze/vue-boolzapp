@@ -65,24 +65,27 @@
                     <div class="bg-white container d-flex shadow-sm">
 
                         <div class="height-leftside">
-                            <div class="d-flex justify-content-between gap-1 py-2 border-chat-top"
-                                style="width: 380px; max-width: 400px;" v-for="(contact, index) in searchText ? filteredContacts : contacts" @click="selectContact(index)" >
+                            <template v-for="(contact, index) in contacts">
+                                <div class="d-flex justify-content-between gap-1 py-2 border-chat-top"
+                                :class="index == activeContact ? 'bg-success' : ''"
+                                    style="width: 380px; max-width: 400px;" 
+                                    v-if="contact.visible"
+                                    @click="selectContact(index)" >
 
-                                <div class="d-flex gap-1">
-                                    <img class="circle" :src="contact.avatar" style="height: 50px; width: 50px;">
-                                    <div class="d-flex flex-column">
-                                        <span>{{contact.name}}</span>
-                                        <span class="font-small" style="color: #B1B1B1;">
-                                            Ultimo messaggio inviato
-                                        </span>
+                                    <div class="d-flex gap-1">
+                                        <img class="circle" :src="contact.avatar" style="height: 50px; width: 50px;">
+                                        <div class="d-flex flex-column">
+                                            <span>{{contact.name}}</span>
+                                            <span class="font-small" style="color: #B1B1B1;">
+                                                Ultimo messaggio inviato
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end px-5">
+                                        <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-end px-5">
-                                    <span class="font-smaller" style="color: #B1B1B1;">12:00</span>
-                                </div>
-
-
-                            </div>
+                            </template>
                         </div>
                     </div>
 

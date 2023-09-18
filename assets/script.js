@@ -3,10 +3,9 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      activeContact: 1,
-      newMessage:'', //input utente 
+      activeContact: 0,
+      newMessage: "", //input utente
       searchText: "", //input utente barra ricerca contatti
-      filteredContacts:[], //lista solo contatti filtrati
       contacts: [
         {
           name: "Michele",
@@ -174,11 +173,11 @@ createApp({
   },
   methods: {
     selectContact(index) {
-        this.activeContact = index
+      this.activeContact = index;
     },
     addMessage() {
       if (this.newMessage === "") {
-        return
+        return;
       }
       // Creo un nuovo oggetto messaggio
       const message = {
@@ -193,8 +192,8 @@ createApp({
 
       // Resetto l'input del mess
       this.newMessage = "";
-       // viene inviata la risposta automatica dopo 1 secondo dal mess inviato
-    setTimeout(this.sendResponse, 1000);
+      // viene inviata la risposta automatica dopo 1 secondo dal mess inviato
+      setTimeout(this.sendResponse, 1000);
     },
     sendResponse() {
       const responseMessageAuto = {
@@ -202,22 +201,25 @@ createApp({
         message: "ok",
         status: "received",
       };
-  
+
       this.contacts[this.activeContact].messages.push(responseMessageAuto);
     },
     filterContacts() {
       //variabile per prendere input dell'utente
       const searchText = this.searchText.toLowerCase(); //.toLowerCase per evitare errori
-  
-      // Filtra i contatti in base a ciò che si è cercato
-      this.filteredContacts = this.contacts.filter((contact) =>
-        //uso includes per verificare se il testo scritto è presente o no e quindi visibile o no
-        contact.name.toLowerCase().includes(searchText)
-      );
+      //foreach
+      this.contacts.forEach((contact) => {
+        //controllo se contact.name contiene l'input inserito dall'utente
+        if (contact.name.toLowerCase().includes(searchText)) {
+          //visibile true or false
+          contact.visible = true;
+        } else {
+          contact.visible = false;
+        }
+      });
     },
-  }
+  },
 }).mount("#app");
-
 
 //memo
 //includes lavora con i booleani
