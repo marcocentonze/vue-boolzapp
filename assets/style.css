@@ -1,3 +1,9 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 :root {
     --bz-app-principal: #DBDBD2;
     --bz-app-header: #009688;
@@ -55,11 +61,36 @@ font-family: 'VT323', monospace;
 .img-bg{
     background-image: url(./img/mine.jpg);
     height: 80vh;
-    overflow: auto;
+   overflow-x: auto;
 }
 
 .img-bg-chat{
     background-color: #F3EEEA;
     
 }
+
+.height-leftside{
+    height:73vh;
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+    .height-leftside {
+     height:64.6vh;
+    }
+  }
+  
+@media (max-width: 992px) {
+    .height-leftside {
+     height:71.6vh;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .height-leftside {
+     height:71.6vh;
+    }
+  }
+
+  
 

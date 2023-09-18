@@ -4,7 +4,9 @@ createApp({
   data() {
     return {
       activeContact: 1,
-      newMessage:'',
+      newMessage:'', //input utente 
+      searchText: "", //input utente barra ricerca contatti
+      filteredContacts:[], //lista solo contatti filtrati
       contacts: [
         {
           name: "Michele",
@@ -180,7 +182,7 @@ createApp({
       }
       // Creo un nuovo oggetto messaggio
       const message = {
-        //ottengo la data in tempo reale
+        //ottengo la data + ora in tempo reale
         date: new Date().toLocaleString(),
         message: this.newMessage,
         status: "sent", // sent così diventa verde
@@ -203,5 +205,21 @@ createApp({
   
       this.contacts[this.activeContact].messages.push(responseMessageAuto);
     },
+    filterContacts() {
+      //variabile per prendere input dell'utente
+      const searchText = this.searchText.toLowerCase(); //.toLowerCase per evitare errori
+  
+      // Filtra i contatti in base a ciò che si è cercato
+      this.filteredContacts = this.contacts.filter((contact) =>
+        //uso includes per verificare se il testo scritto è presente o no e quindi visibile o no
+        contact.name.toLowerCase().includes(searchText)
+      );
+    },
   }
 }).mount("#app");
+
+
+//memo
+//includes lavora con i booleani
+//differenza push(fine) e unshift(inzio)
+//new date().toLocaleString() prende la data e ora del tuo sistema
