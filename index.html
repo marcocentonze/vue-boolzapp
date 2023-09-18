@@ -18,7 +18,7 @@
     <div id="app">
 
         <div class="custom_container">
-            <div class="container d-flex">
+            <div class="container d-flex" style="height: 100vh;">
                 <div class="col-4 pt-4 ">
 
                     <div class="d-flex justify-content-between px-3 py-2"
@@ -26,7 +26,7 @@
                         <div class="d-flex align-items-center gap-1">
 
                             <div>
-                                <img class="circle img-fluid" src="./assets/img/avatar_1.jpg">
+                                <img class="circle img-fluid" src="./assets/img/avatar_4.jpg">
                             </div>
                             <span>Marco</span>
 
@@ -44,7 +44,8 @@
                         style="background-color: var(--bz-app-focus);">
 
                         <div class="circle d-flex justify-content-center align-items-center bg-white">
-                            <i class="fa-solid fa-bell-slash fa-lg" style="background-color: var(--bz-app-focus); color: #8EDAFC;"></i>
+                            <i class="fa-solid fa-bell-slash fa-lg"
+                                style="background-color: var(--bz-app-focus); color: #8EDAFC;"></i>
                         </div>
                         <div class="d-flex flex-column">
                             <span>Ricevi notifiche dei nuovi messaggi</span>
@@ -58,7 +59,8 @@
                                 <i class="fa-solid fa-magnifying-glass fa-xs pointer"
                                     style="background-color: var(--bz-app-principal);"></i>
                             </span>
-                            <input  v-model="searchText" type="text" @keyup="filterContacts" class="form-control border-0 shadow-sm font-small"
+                            <input v-model="searchText" type="text" @keyup="filterContacts"
+                                class="form-control border-0 shadow-sm font-small"
                                 placeholder="Cerca o inizia una nuova chat..">
                         </div>
                     </div>
@@ -67,10 +69,9 @@
                         <div class="height-leftside">
                             <template v-for="(contact, index) in contacts">
                                 <div class="d-flex justify-content-between gap-1 py-2 border-chat-top"
-                                :class="index == activeContact ? 'bg-success' : ''"
-                                    style="width: 380px; max-width: 400px;" 
-                                    v-if="contact.visible"
-                                    @click="selectContact(index)" >
+                                    :class="index == activeContact ? 'bg-success' : ''"
+                                    style="width: 380px; max-width: 400px;" v-if="contact.visible"
+                                    @click="selectContact(index)">
 
                                     <div class="d-flex gap-1">
                                         <img class="circle" :src="contact.avatar" style="height: 50px; width: 50px;">
@@ -99,7 +100,7 @@
                         <div class="d-flex align-items-center gap-1">
 
                             <div v-if="contacts[activeContact]">
-                                <img class="circle":src="contacts[activeContact].avatar">
+                                <img class="circle" :src="contacts[activeContact].avatar">
                             </div>
                             <div class="d-flex flex-column">
                                 <span>{{contacts[activeContact].name}}</span>
@@ -118,16 +119,18 @@
                     <div class="container shadow-sm img-bg">
                         <div>
 
-                            <div v-for="(contact,index) in contacts[activeContact].messages" class="d-flex mx-5 mt-5" :class="contact.status == 'sent' ? 'justify-content-end': 'justify-content-start'">
-                                 
+                            <div v-for="(contact,index) in contacts[activeContact].messages" class="d-flex mx-5 mt-5"
+                                :class="contact.status == 'sent' ? 'justify-content-end': 'justify-content-start'">
+
                                 <div class="p-2 rounded-3"
-                                :style="contact.status === 'sent' ? 'background-color: var(--bz-app-success)' : 'background-color: var(--bz-app-white)'">
+                                    :style="contact.status === 'sent' ? 'background-color: var(--bz-app-success)' : 'background-color: var(--bz-app-white)'">
                                     <p>{{contact.message}}</p>
-                                    <div class=" text-end" style="color: var(--bz-app-principal);">{{contact.date}}</div>
+                                    <div class=" text-end" style="color: var(--bz-app-principal);">{{contact.date}}
+                                    </div>
                                 </div>
 
                             </div>
-                           
+
 
                         </div>
                     </div>
@@ -137,10 +140,10 @@
                                 style="background-color: var(--bz-app-principal);"></i>
                         </span>
                         <!--keyup when we are listening for keyboard -->
-                        <input  v-model="newMessage" @keyup.enter="addMessage" type="text" class="form-control border-0 rounded-2 p-2 shadow-sm"
-                            placeholder="Scrivi un messaggio">
+                        <input v-model="newMessage" @keyup.enter="addMessage" type="text"
+                            class="form-control border-0 rounded-2 p-2 shadow-sm" placeholder="Scrivi un messaggio">
                         <span class="input-group-text border-0 img-bg-chat">
-                            <i @click="addMessage"  class="fa-solid fa-paper-plane fa-lg pointer"></i>
+                            <i @click="addMessage" class="fa-solid fa-paper-plane fa-lg pointer"></i>
                         </span>
                     </div>
 

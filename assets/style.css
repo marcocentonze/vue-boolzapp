@@ -68,6 +68,7 @@ body{
 .height-leftside{
     height:73vh;
     min-width: 360px;
+    overflow-y:auto;
     overflow-x: hidden;
 }
 
